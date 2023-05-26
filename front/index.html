@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/pepe.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" />
+    
+</head>
+<body style="font-family: 'Open Sans'; background-color: #E0E0E0;">
+    
+  <!-- Navbar -->
+  <div class="container-fluid" style="margin-top:0.7rem;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fondo-claro custom-navbar fw-bold fs-5">
+      <div class="container-fluid" style="margin-left:2rem; margin-right: 2rem;">
+        <a class="navbar-brand fs-4">
+          <img src="./img/logo.png" alt="Logo" width="100" height="100" style="border-radius: 100%; border: 3px solid #505050">
+          Proyecto pepe
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="visually-hidden">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+          <div class="navbar-nav derecha" >
+            <ul class="navbar-nav text-end">
+              <li class="nav-item mr-2"><a class="nav-link active" href="#">Home</a></li>
+              <hr>
+              <li class="nav-item mr-2"><a class="nav-link" href="#">Ayuda</a></li>
+              <hr>
+              <li class="nav-item mr-2"><a class="nav-link" href="#">Blog</a></li>
+              <hr>
+              <li class="nav-item mr-2"><a class="nav-link" href="#">Stellarium</a></li>
+              <hr>
+              <li class="nav-item mr-2"><button class="btn btn-dark boton fs-5" >
+                Acceder
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Fin navbar-->
+
+  <!-- body main -->
+  <div class="container-fluid">
+    <div class="row " >
+      <div class="col-12 col-xl-6 col-xxl-5 " style="padding-right:0.7rem; padding-left:0.7rem;  margin-top: 0.7rem; min-width: 500px; ">
+        <div class="componente fondo-claro" style=" display: flex;">
+          <img src="./img/solar-system-animation.svg" alt="Sistema solar" width="500" height="500" style="border-radius: 1.3rem; object-fit: cover; margin:auto auto;"/>
+        </div>
+      </div>
+      <div class="col-12 col-xl-6 col-xxl-7 align-self-center" style="height: 500px; padding-right:0.7rem; padding-left: 0.7rem; margin-top: 0.7rem;">
+        <div class="fondo-claro componente" style="height: 100%; width:auto; display: flex;">
+          <div style="width: 70%; height:50%; margin:auto auto auto auto">
+            <h3> Descubre mas sobre los secretos del espacio</h3>
+            <hr>
+            <p>
+              Registrate para acceder a un gran conetenido sobre el espacio en un simulador del cielo en 3D, un catalogo sobre material astronomico y mas
+            </p>
+            <button class="btn btn-29"> 
+              <span class="text-container">
+                <span clas="text">
+                  REGISTRARSE 🡲
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin body main-->
+
+  <!-- footer -->
+  <footer class=" text-center text-white" style="margin-top: 250px;">
+
+    <div class=" bg-dark p-4 componente" style="margin:0.7rem">
+      <section class="mb-4" >
+        
+        <h4>José Rodríguez Cáceres</h4>
+        <p>Pagina de proyecto de fin de grado</p>
+      </section>
+
+    </div>
+    <div class="text-center p-3 componente" style="background-color: rgba(0, 0, 0, 0.4); font-size: 15px; margin: 0.7rem; margin-top: 0%;" >
+      <p>
+        This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, <br>
+        either version 3 of the License, or (at your option) any later version.
+      </p>
+      <p>
+        This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; <br>
+        without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. <br>
+        See the GNU General Public License for more details.
+      </p>
+      <p>
+        You should have received a copy of the GNU General Public License along with this program. <br>
+        If not, see <a href="https://www.gnu.org/licenses">https://www.gnu.org/licenses</a>.
+      </p>
+    </div>
+  </footer>
+  <!-- fin footer-->
+
+  <!-- importar los scripts de jquery, popper y bootstrap-->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <!-- actrivar el tooltip-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+</body>
+</html>
