@@ -5,6 +5,7 @@ export const theme = extendTheme({
         primary:{
             black: '#000',
             clearBlack: '#202028',
+            clearBlack2: '#374151',
             veryDark:'#0F0E15',
             gray:'#343434',
             green:'#26C29A',
@@ -16,7 +17,7 @@ export const theme = extendTheme({
     styles:{
         global:{
             body:{
-                bg:'primary.gray',
+                bg:'primary.clearBlack',
                 color:'white'
             }
         }

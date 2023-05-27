@@ -3,22 +3,21 @@ import TitleBar from "@/components/molecules/TitleBar";
 import Navbar from "@/components/organisms/Navbar";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import Link from "next/link";
 
 const Ayuda = () => {
   return (
-    <>
+    <Box w={{ base: "100%", lg: "90%", xl: "80%" }} margin="auto">
       <Navbar />
       <TitleBar> Seccion de informacion </TitleBar>
       <Flex flexDir="column" gap="5">
         <Flex flexDir={{ base: "column", md: "row" }} gap="5">
           <Box
-            bg='primary.clearBlack'
+            bg="primary.gray"
             //border="0.2rem solid white"
             rounded="3xl"
-            py='4'
-            px='8'
+            py="4"
+            px="8"
             width="auto"
           >
             <Text fontSize="3xl" fontWeight="700" mb="3">
@@ -50,7 +49,7 @@ const Ayuda = () => {
               medida
             </Text>
             <Box
-              width="fit-content"
+              width="max-content"
               height="auto"
               padding="5"
               border="3px solid white"
@@ -104,7 +103,7 @@ const Ayuda = () => {
           </Flex>
         </Flex>
       </Flex>
-    </>
+    </Box>
   );
 };
 

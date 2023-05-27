@@ -36,13 +36,13 @@ const NavbarLinkList = () => {
         </svg>
       </button>
       <div
-        style={{ backgroundColor: "#323236" }}
+        style={{ backgroundColor: "#202028" }}
         className="hidden md:ml-auto w-full md:block md:w-auto"
         id="navbar-default"
       >
         <ul
           className="font-medium flex flex-col p-4 md:p-0 mt-4 
-                 rounded-lg md:flex-row md:space-x-8 md:mt-0 text-white bg-dark "
+                 rounded-lg md:flex-row md:space-x-8 md:mt-0 text-white "
         >
           <li className="mb-5 md:mb-0">
             <NavbarLink location="/" Linkclass="navLink">
@@ -61,7 +61,7 @@ const NavbarLinkList = () => {
           </li>
           <li className="mb-5 md:mb-0">
             <NavbarLink location="/stellarium" Linkclass="navLink">
-              Stellarium
+              Virtual Sky
             </NavbarLink>
           </li>
         </ul>

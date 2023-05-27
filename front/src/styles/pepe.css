@@ -31,7 +31,7 @@ body {
 }
 
 .navLink{
-  background-color:var(--dark-color);
+  background-color:#202028;
   color:'white';
   padding: 0.625rem;
   border-radius: .5rem;

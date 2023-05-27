@@ -1,11 +1,11 @@
 import BlogPost from "@/components/molecules/BlogPost";
 import TitleBar from "@/components/molecules/TitleBar";
 import Navbar from "@/components/organisms/Navbar";
-import { Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 const Blog = () => {
   return (
-    <>
+    <Box w={{ base: "100%", lg: "90%", xl: "80%" }} margin="auto">
       <Navbar />
       <TitleBar> ¡Bienvenido al blog!</TitleBar>
       <BlogPost
@@ -24,7 +24,7 @@ const Blog = () => {
           date: "00-00-2023",
         }}
       />
-    </>
+    </Box>
   );
 };
 
