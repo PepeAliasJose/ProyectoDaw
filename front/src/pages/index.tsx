@@ -1,12 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Logo from '../components/atoms/Logo'
-import Button from '../components/atoms/Button'
-import NavbarLink from '../components/atoms/NavbarLink'
-import NavbarMark from '../components/molecules/NarvbarMark'
-import NavbarLinkList from '../components/molecules/NavbarLinkList'
 import Navbar from '../components/organisms/Navbar'
-import Box from '../components/molecules/Box'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,12 +10,12 @@ export default function Home() {
       <Navbar/>
       <br/>
       <div className='grid grid-cols-2 gap-3'>
-        <div className="rounded-3xl p-1 fondo-claro col-span-12 md:col-span-1 items-center h-auto">
+        <div className="rounded-3xl col-span-12 md:col-span-1 items-center h-auto">
               <Image width='600' height='600' src='img/solar-system-animation.svg' className='rounded-3xl m-auto h-full' 
               style={{width:'auto',minHeight:'20rem',maxHeight:'35rem', objectFit:'cover'}}
               alt='slorar system animation'/>
         </div>
-        <div className="rounded-3xl p-1 border-white border-2 bg-dark col-span-12 md:col-span-1 flex items-center h-auto pt-8 pb-8">
+        <div className="rounded-3xl p-1 col-span-12 md:col-span-1 flex items-center h-auto pt-8 pb-8" style={{backgroundColor:'#202028'}}>
             <div className='w-max m-auto'>
               <div className='w-3/4 m-auto'>
                 <h3 className='text-2xl'> Descubre mas sobre los secretos del espacio</h3>
@@ -46,8 +40,8 @@ export default function Home() {
         <div className='items-center w-fit m-auto text-center'>
           <p className='text-5xl font-bold'>STELLARIUM </p>
           <hr className='w-4/5 border-b-2 rounded-lg m-auto mt-3 mb-4'/>
-          <p className='text-xl'>Es un planetario de código abierto para su ordenador. <br/>
-            Muestra un cielo auténtico en 3D, tal como lo que ve a simple vista, con binoculares o un telescopio.</p>
+          <p className='text-xl'>Es un planetario de código abierto para su navegador. <br/>
+            Muestra un cielo auténtico en 3D, tal como lo que ve a simple vista, con prismaticos o un telescopio.</p>
         </div>
       </div>
       

@@ -9,7 +9,7 @@ const TitleBar = (props:Props) => {
 
         <Flex
           my={3}
-          backgroundColor='blue.500'
+          backgroundColor='primary.green'
           color='primary.white'
           borderRadius='2xl'
           shadow='md'
