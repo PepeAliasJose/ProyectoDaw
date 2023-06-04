@@ -7,7 +7,7 @@ const Configurador = () => {
     <>
       <Navbar />
 
-      <TitleBar>Configurador de equipo astronomico a medida</TitleBar>
+      <TitleBar>Configurador de equipo a medida</TitleBar>
 
       <Flex borderRadius="3xl" bg="primary.black" flexDir="row" gap="2">
         <Flex
@@ -15,7 +15,7 @@ const Configurador = () => {
           border="0.125rem solid white"
           flexDir="column"
           width="25%"
-          height='fit-content'
+          height="fit-content"
         >
           <Text width="fit-content" margin="auto" fontWeight="700">
             CATEGORIAS:
@@ -41,7 +41,7 @@ const Configurador = () => {
           flexDir="column"
           width="35%"
           alignContent="center"
-          height='fit-content'
+          height="fit-content"
         >
           <Text width="fit-content" margin="auto" fontWeight="700">
             CONFIGURACION:

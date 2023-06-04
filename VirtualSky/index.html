@@ -48,9 +48,18 @@
 	<script src="virtualsky.js" type="text/javascript"></script>
 	<script src="geo/virtualsky-geo.js" type="text/javascript"></script>
 	<script>
+    const url = window.location.search;
+	const params = new URLSearchParams(url)
+	const messier = params.get('showMessier') === 'true';
+	console.log(messier)
 	var planetarium;
 	S(document).ready(function(){
-		planetarium = S.virtualsky({id:'starmapper',callback:{geo:geoIP},fullscreen:true});
+		planetarium = S.virtualsky(
+			{id:'starmapper',
+			callback:{geo:geoIP},
+			fullscreen:true,
+			objects: messier ? 'messier.json' : ""}
+			);
 	});
 	</script>
 </head>

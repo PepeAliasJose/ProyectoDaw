@@ -233,3 +233,13 @@ body {
     transform: translateX(200%);
   }
 }
+
+.opcion {
+  background: var(--dark-color);
+  color:#000;
+  border-radius: 14px;
+}
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}  

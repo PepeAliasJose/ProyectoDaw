@@ -55,8 +55,8 @@ const NavbarLinkList = () => {
             </NavbarLink>
           </li>
           <li className="mb-5 md:mb-0">
-            <NavbarLink location="/blog" Linkclass="navLink">
-              Blog
+            <NavbarLink location="/catalogo" Linkclass="navLink">
+              Catálogo
             </NavbarLink>
           </li>
           <li className="mb-5 md:mb-0">

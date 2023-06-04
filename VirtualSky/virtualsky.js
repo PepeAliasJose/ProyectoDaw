@@ -224,7 +224,7 @@ window.fullScreenApi = fullScreenApi;
 /*! VirtualSky */
 function VirtualSky(input){
 
-	this.version = "0.7.7";
+	this.version = "Pepe custom engine";
 
 	this.ie = false;
 	this.excanvas = (typeof G_vmlCanvasManager != 'undefined') ? true : false;
@@ -1770,7 +1770,7 @@ VirtualSky.prototype.toggleInfoBox = function(i){
 		el.html(this.pointers[i].html);
 		var x = Math.round(this.pointers[i].x - Math.round(el.outerWidth()/2))+'px';
 		var y = Math.round(this.pointers[i].y - Math.round(el.outerHeight()/2))+'px';
-		el.css({'position':'absolute','left':x,'top':y,'z-index':10,'display':'block'});
+		el.css({'position':'absolute','right':'25px','bottom':'25px','z-index':10,'display':'block','width':'250px','height':'250px'});
 	}else{
 		el.css({'display':'none'});
 	}
@@ -2370,7 +2370,7 @@ VirtualSky.prototype.drawImmediate = function(proj){
 
 	// Credit line
 	if(this.credit){
-		var credit = this.getPhrase('power');
+		var credit = 'Creado por LCO - Pepe custom Engine';
 		var metric_credit = this.drawText(credit,this.padding,this.tall-this.padding);
 		// Float a transparent link on top of the credit text
 		if(d.find('.'+this.id+'_credit').length == 0) d.append('<div class="'+this.id+'_credit"><a href="http://slowe.github.io/VirtualSky/" target="_parent" title="Las Cumbres Observatory">'+this.getPhrase('powered')+'</a></div>');
@@ -3451,18 +3451,15 @@ VirtualSky.prototype.addPointer = function(input){
 		p = input;
 		p.d = is(p.d, "number")?p.d:5;
 		if(typeof p.html !== "string"){
-			style = p.style || "width:128px;height:128px;";
+			style = p.style || "width:250px;height:250px;";
 			url = p.url || "http://server1.wikisky.org/v2?ra="+(p.ra/15)+"&de="+(p.dec)+"&zoom=6&img_source=DSS2";
 			img = p.img || 'http://server7.sky-map.org/imgcut?survey=DSS2&w=128&h=128&ra='+(p.ra/15)+'&de='+p.dec+'&angle=0.25&output=PNG';
-			label = p.credit || "View in Wikisky";
-			credit = p.credit || "DSS2/Wikisky";
+			label = p.credit || "Ver en wikisky";
+			credit = p.credit || "";
 			p.html =  p.html ||
-				'<div class="virtualsky_infocredit">'+
-					'<a href="'+url+'" style="color: white;">'+credit+'</a>'+
-				'</div>'+
-				'<a href="'+url+'" style="display:block;'+style+'">'+
-					'<img src="'+img+'" style="border:0px;'+style+'" title="'+label+'" />'+
-				'</a>';
+				'<div style="display:block;'+style+'">'+
+					'<img src="'+img+'" style="border:0px;'+style+'" />'+
+				'</div>';
 		}
 		this.pointers[i] = p;
 	}

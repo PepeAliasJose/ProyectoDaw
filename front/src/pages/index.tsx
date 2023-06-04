@@ -35,15 +35,12 @@ export default function Home() {
         >
           <div className="w-max m-auto">
             <div className="w-3/4 m-auto">
-              <h3 className="text-2xl">
-                {" "}
-                Descubre mas sobre los secretos del espacio
-              </h3>
-              <hr className="border-b-2 border-white rounded-lg mt-2 mb-2" />
+              <h3 className="text-3xl">TITLE TITLE</h3>
+              <hr className="border-b-2 border-white rounded-lg mt-3 mb-3" />
               <p className="mb-4">
-                Registrate para acceder a un gran conetenido sobre el espacio en
-                un simulador del cielo en 3D, un catalogo sobre material
-                astronomico y mas
+                Registrate para acceder a un catalogo sobre material
+                astronomico, guardar el estado del configurador y un simulador
+                del cielo nocturno con varias configuraciones
               </p>
               <button className="btn-29 rounded-xl">
                 <span className="text-container">
@@ -63,9 +60,11 @@ export default function Home() {
           <p className="text-5xl font-bold">Virtual Sky </p>
           <hr className="w-4/5 border-b-2 rounded-lg m-auto mt-3 mb-4" />
           <p className="text-xl px-6">
-            Es un planetario de código abierto para su navegador. <br />
-            Muestra un cielo auténtico en 3D, tal como lo que ve a simple vista,
-            con prismaticos o un telescopio.
+            Es un planetario de código abierto para navegador. <br />
+            Muestra un cielo en 3D, con una seleccion de ajustes para cambiar el
+            tipo de proyeccion, <br />
+            que objetos observar y desde donde para conseguir una simulación
+            precisa del cielo de donde te encuentres.
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 Proyecto para el curso de DAW
 
-Para arrancar la aplicacion ->
+Para arrancar la aplicacion -> - node - pnpm - pnpm install - cd front - pnpm dev
 
 Arrancar las aplicaciones del back
 
