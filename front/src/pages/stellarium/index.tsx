@@ -221,9 +221,10 @@ const Stellarium = () => {
           <Flex
             flexDir="column"
             width={{ base: "full", sm: "19rem" }}
-            border="solid .2rem white"
+            bg='primary.green'
             borderRadius="xl"
-            padding="6"
+            padding="7"
+            shadow='lg'
             gap="1"
           >
             <FormControl display="flex" alignItems="center" width="full">
