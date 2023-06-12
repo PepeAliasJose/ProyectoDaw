@@ -42,6 +42,8 @@ const Stellarium = () => {
   const [eqLines, showEqLines] = useState(true);
   const [live, isLive] = useState(false);
   const [showMessier, setShowMessier] = useState(false);
+  const [latitud, setLatitud] = useState('36.9195');
+  const [longitud, setLongitud] = useState("-6.0781");
 
   const createProjectionTime = ({ date }: { date?: string }) => {
     const d = new Date();
@@ -53,8 +55,8 @@ const Stellarium = () => {
 
   const accessEngineURL =
     "?&" +
-    "latitude=36.9195" +
-    "&longitude=-6.0781" +
+    `latitude=${latitud}` +
+    `&longitude=${longitud}` +
     `&projection=${projection}` +
     `&showorbits=${orbits}` +
     `&gridlines_eq=${eqLines}` +
@@ -200,19 +202,19 @@ const Stellarium = () => {
               <FormControl>
                 <FormLabel>Latidud</FormLabel>
                 <Input
+                  onChange={(event) => setLatitud(event.target.value)}
                   borderRadius="xl"
                   type="number"
-                  disabled
-                  value="36.9195"
+                  value={latitud ?? "36.9195"}
                 />
               </FormControl>
               <FormControl>
                 <FormLabel>Longitud</FormLabel>
                 <Input
+                  onChange={(event) => setLongitud(event.target.value)}
                   borderRadius="xl"
                   type="number"
-                  disabled
-                  value="-6.0781"
+                  value={longitud ?? "-6.0781"}
                 />
               </FormControl>
             </Flex>
@@ -294,6 +296,7 @@ const Stellarium = () => {
         </Box>
       </Flex>
       <Box
+      hidden
         mt="4"
         width="full"
         height="500px"

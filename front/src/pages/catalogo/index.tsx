@@ -1,7 +1,8 @@
 import TitleBar from "@/components/molecules/TitleBar";
+import Modal from "@/components/organisms/Modal";
 import Navbar from "@/components/organisms/Navbar";
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Flex, FormControl, FormLabel, Img, Input, Select, Spinner, Text } from "@chakra-ui/react";
-import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Flex, FormControl, FormLabel, Img, Input, Select, Spinner, Text, useDisclosure } from "@chakra-ui/react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 const api = (
   setSearchData: Dispatch<SetStateAction<string[] | undefined>>,
@@ -32,12 +33,16 @@ const apiImg = (
 }
 
 const Blog = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [mode, setMode] = useState('login');
+  const [user, setUser] = useState<any>({});
+
   const [bodiesData, setBodiesData] = useState<string[]>();
   const [starChart, setStarChart] = useState('');
   const [date, setDate] = useState("2023-06-12");
   const [time, settime] = useState("10:30");
-  const [latitud, setLatitud] = useState('36.9195');
-  const [longitud, setLongitud] = useState("-6.0781");
+  const [latitud, setLatitud] = useState(user.p_latitud ? user.p_latitud : '36.9195');
+  const [longitud, setLongitud] = useState(user.p_longitud ? user.p_longitud :"-6.0781");
   const [constelacion, setConstelacion] = useState("ori");
 
   const [ changeInfo, setChangeInfo] = useState(false);
@@ -45,6 +50,20 @@ const Blog = () => {
 
   const [ generateChart, setGenerateChart] = useState(false);
   const [chartLoading,setChartLoading] = useState(false);
+
+  if(typeof localStorage!== 'undefined' && !user?.id){
+    const u = localStorage.getItem('user');
+    const user = JSON.parse(u as string);
+    if(user?.id){
+      setUser(user)
+      setLatitud(user.p_latitud)
+      setLongitud(user.p_longitud)
+    }else{
+      if(!isOpen){
+        onOpen()
+      }
+    }
+  }
 
   useEffect(() => {
     if(changeInfo){
@@ -70,6 +89,7 @@ const Blog = () => {
       <Navbar />
       <TitleBar> ¡Bienvenido al catalogo!</TitleBar>
       <Flex flexDir={{base:'column',xl:'row'}} >
+        <Modal isOpen={isOpen} onClose={onClose} mode={mode} />
         <Box w={{base:'full',xl:'50%'}}>
           <Text  fontSize='2xl' mb='6' ml={{base:'0',xl:'4'}}>Cuerpos del sistema solar</Text>
           <Flex flexDir='column'  mx={{base:'0',xl:'4'}} mb='4' gap='4'>
@@ -77,15 +97,19 @@ const Blog = () => {
               <FormControl>
                 <FormLabel>Fecha:</FormLabel>
                 <Input
+                  value={date}
                   borderRadius="xl"
                   type="date"
+                  onChange={(event) => setDate(event.target.value as any)}
                 />
               </FormControl>
               <FormControl>
                 <FormLabel>Hora:</FormLabel>
                 <Input
+                  value={time}
                   borderRadius="xl"
                   type="time"
+                  onChange={(event) => settime(event.target.value as any)}
                 />
               </FormControl>
             </Flex>

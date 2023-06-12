@@ -64,6 +64,11 @@ const NavbarLinkList = () => {
               Virtual Sky
             </NavbarLink>
           </li>
+          <li className="mb-5 md:mb-0">
+            <NavbarLink location="/perfil" Linkclass="navLink">
+              PERFIL
+            </NavbarLink>
+          </li>
         </ul>
       </div>
     </>

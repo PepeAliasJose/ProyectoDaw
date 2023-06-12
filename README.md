@@ -2,11 +2,18 @@
 
 Proyecto para el curso de DAW
 
-Para arrancar la aplicacion -> - node - pnpm - pnpm install - cd front - pnpm dev
+Para arrancar la aplicacion -> 
+    - node 
+    - pnpm 
+    - pnpm install 
+    - cd front 
+    - pnpm dev
 
 Arrancar las aplicaciones del back
 
-    -> BASE DE DATOS DE EQUIPO (JAVA)
+    -> BASE DE DATOS 
+        - cd front/data
+        - npx json-server --watch db.json --port 8000
     -> SERVIDOR DEL BLOG Y CUENTA DE USUARIO (DIRECTUS)
     -> SKY ENGINE
         - cd rute/to/engine.js

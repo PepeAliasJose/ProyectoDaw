@@ -1,13 +1,18 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "../components/organisms/Navbar";
-import { Box } from "@chakra-ui/react";
+import { Box, useDisclosure } from "@chakra-ui/react";
+import Modal from "@/components/organisms/Modal";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [mode, setMode] = useState('register');
   return (
     <Box w={{ base: "100%", lg: "90%", xl: "80%" }} margin="auto">
+      <Modal isOpen={isOpen} onClose={onClose} mode={mode} abbleToClose/>
       <Navbar />
       <br />
       <div className="grid grid-cols-2 gap-3">
@@ -35,14 +40,14 @@ export default function Home() {
         >
           <div className="w-max m-auto">
             <div className="w-3/4 m-auto">
-              <h3 className="text-3xl">TITLE TITLE</h3>
+              <h3 className="text-3xl">Bienvenido</h3>
               <hr className="border-b-2 border-white rounded-lg mt-3 mb-3" />
               <p className="mb-4">
                 Registrate para acceder a un catalogo sobre material
                 astronomico, guardar el estado del configurador y un simulador
                 del cielo nocturno con varias configuraciones
               </p>
-              <button className="btn-29 rounded-xl">
+              <button className="btn-29 rounded-xl" onClick={onOpen}>
                 <span className="text-container">
                   <span className="text">REGISTRARSE</span>
                 </span>

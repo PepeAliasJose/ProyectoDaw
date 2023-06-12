@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "password": "",
+      "p_latitud": "",
+      "p_longitud": "",
+      "id": "pepe"
+    },
+    {
+      "password": "",
+      "p_latitud": "",
+      "p_longitud": "",
+      "id": "juan"
+    },
+    {
+      "id": "Luis",
+      "password": "12345",
+      "p_latitud": "-8.81",
+      "p_longitud": "56.95"
+    },
+    {
+      "id": "Perez",
+      "password": "12345",
+      "p_latitud": "",
+      "p_longitud": ""
+    },
+    {
+      "id": "Prueba",
+      "password": "12345",
+      "p_latitud": "",
+      "p_longitud": ""
+    },
+    {
+      "id": "Pepe",
+      "password": "12345",
+      "p_latitud": "35.9156",
+      "p_longitud": "-6.0781"
+    }
+  ],
+  "data": {}
+}
